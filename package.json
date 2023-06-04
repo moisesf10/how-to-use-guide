@@ -1,0 +1,38 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^24.0.1",
+        "axios": "^1.1.2",
+        "laravel-vite-plugin": "^0.7.2",
+        "sass": "^1.60.0",
+        "vite": "^4.0.0",
+        "vite-plugin-static-copy": "^0.13.1"
+    },
+    "dependencies": {
+        "glob": "^9.3.2",
+        "grapesjs": "^0.20.4",
+        "grapesjs-blocks-basic": "^1.0.1",
+        "grapesjs-blocks-table": "^0.0.118",
+        "grapesjs-component-code-editor": "^1.0.20",
+        "grapesjs-component-countdown": "^1.0.1",
+        "grapesjs-custom-code": "^1.0.1",
+        "grapesjs-parser-postcss": "^1.0.1",
+        "grapesjs-plugin-ckeditor": "^0.0.10",
+        "grapesjs-plugin-export": "^1.0.11",
+        "grapesjs-plugin-forms": "^2.0.5",
+        "grapesjs-preset-webpage": "^1.0.2",
+        "grapesjs-style-bg": "^2.0.1",
+        "grapesjs-tabs": "^1.0.6",
+        "grapesjs-tooltip": "^0.1.7",
+        "grapesjs-touch": "^0.1.1",
+        "grapesjs-tui-image-editor": "^1.0.1",
+        "grapesjs-typed": "^1.0.5",
+        "path": "^0.12.7",
+        "rollup": "^3.20.2",
+        "sortablejs": "^1.15.0"
+    }
+}
