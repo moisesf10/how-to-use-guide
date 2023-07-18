@@ -22,12 +22,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-
+/*
         $configurations = Configuration::all();
         config()->set('app.system', $configurations);
         $this->parseConfigurations($configurations);
 
         Vite::macro('image', fn ($asset) => $this->asset("resources/img/{$asset}"));
+        */
     }
 
     private function parseConfigurations(Collection $configurations){
