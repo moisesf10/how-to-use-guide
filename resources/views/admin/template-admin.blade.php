@@ -131,7 +131,7 @@
                     </li>
 
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="{{route('admin_logout')}}">
+                        <a class="dropdown-item d-flex align-items-center" data-global-action="logout" href="{{route('admin_logout')}}">
                             <i class="bi bi-box-arrow-right"></i>
                             <span>Sair</span>
                         </a>

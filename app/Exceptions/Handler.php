@@ -2,7 +2,9 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Support\Facades\DB;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -44,5 +46,11 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+
+        $this->reportable(function (QueryException $e) {
+//            if($e->errorInfo[1] == 1049){
+//                DB::raw('CREATE DATABASE IF NOT EXISTS '. env('DB_DATABASE') );
+//            }
+        })->stop();
     }
 }
