@@ -92,6 +92,7 @@ class AccountController extends Controller
         switch($user->status){
             case 'pending':
                 // send to page of information about the approved for admin
+                return 'account created with status pending do not contain redirect to home page';
                 break;
             case 'email_validation':
                 // send to page of information about the email validation
@@ -107,6 +108,7 @@ class AccountController extends Controller
                 break;
             default:
                 // redirect to page of information about create account with disabled status
+                return 'account created with status default do not contain redirect to home page';
                 break;
         }
 

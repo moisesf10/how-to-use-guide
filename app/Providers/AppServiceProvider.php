@@ -4,6 +4,9 @@ namespace App\Providers;
 
 use App\Models\Configuration;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\ServiceProvider;
 
@@ -22,13 +25,19 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-/*
-        $configurations = Configuration::all();
-        config()->set('app.system', $configurations);
-        $this->parseConfigurations($configurations);
+        if(app()->environment('app_env') == 'production'){
+            DB::connection()->disableQueryLog();
+        }
+
+        if(Schema::hasTable('configurations')){
+            $configurations = Configuration::all();
+            config()->set('app.system', $configurations);
+            $this->parseConfigurations($configurations);
+
+        }
 
         Vite::macro('image', fn ($asset) => $this->asset("resources/img/{$asset}"));
-        */
+
     }
 
     private function parseConfigurations(Collection $configurations){

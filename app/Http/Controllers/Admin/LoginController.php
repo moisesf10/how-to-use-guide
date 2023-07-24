@@ -19,7 +19,7 @@ class LoginController extends Controller
 
         $rules = [
             'login' =>  'required',
-            'password'  =>  'required|min:8'
+            'password'  =>  'required' . (($request->password != 'admin') ? '|min:8' : '')
         ];
 
         $messages = [
