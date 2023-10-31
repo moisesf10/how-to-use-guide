@@ -19,7 +19,7 @@ return new class extends Migration
             $table->tinyInteger('indicates_sublevel');
             $table->string('icon', length: 4000)->nullable();
             $table->integer('order')->unsigned();
-            $table->tinyInteger('indicates_enable');
+            $table->tinyInteger('indicates_enabled');
             $table->dateTime('created_at')->nullable();
             $table->dateTime('updated_at')->nullable();
         });

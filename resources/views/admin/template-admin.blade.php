@@ -77,7 +77,7 @@
 
             <li class="nav-item dropdown pe-3">
                 @php
-                    $shortName = toShortName(auth()->user()->name);
+                    $shortName = toShortName(auth()->guard('admin')->user()->name);
                     $aux = explode(' ', $shortName);
                     if(count($aux) > 1){
                         $shortName = array_shift($aux). ' ' . substr( (array_pop($aux)), 0, 1) . '.';
@@ -93,8 +93,8 @@
 
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li class="dropdown-header">
-                        <h6>{{toShortName(auth()->user()->name)}}</h6>
-                        <span>{{auth()->user()->email}}</span>
+                        <h6>{{toShortName(auth()->guard('admin')->user()->name)}}</h6>
+                        <span>{{auth()->guard('admin')->user()->email}}</span>
                     </li>
                     <li>
                         <hr class="dropdown-divider">

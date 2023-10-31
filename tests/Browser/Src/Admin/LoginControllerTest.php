@@ -9,7 +9,7 @@ use Tests\DuskTestCase;
 
 class LoginControllerTest extends DuskTestCase
 {
-    use DatabaseMigrations;
+   // use DatabaseMigrations;
 
     public function test_if_admin_login_page_contains_fields_for_authentication(): void
     {
@@ -23,6 +23,7 @@ class LoginControllerTest extends DuskTestCase
                 ->assertPresent('button[type="submit"]')
             ;
         });
+
     }
 
     public function test_if_possible_navigate_to_create_account(){

@@ -14,7 +14,7 @@
         </a>
     </li>
 
-    @if(auth()->user()->indicates_system_admin)
+    @if(auth()->guard('admin')->user()->indicates_system_admin)
     <li class="nav-heading">Administração Sistema</li>
 
     <li class="nav-item">

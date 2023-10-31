@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name', 60);
             $table->string('description', 300)->nullable();
             $table->tinyInteger('indicates_public_access');
-            $table->tinyInteger('indicates_enabled');
+            $table->tinyInteger('indicates_enabled')->default(1);
             $table->dateTime('created_at')->nullable();
             $table->dateTime('updated_at')->nullable();
         });

@@ -78,7 +78,7 @@ class GeneralSettingsController extends Controller
                 if($file){
                     $data['logo'] = $file;
                 }else{
-                    $data['logo'] = $config?->content?->logo;
+                    $data['logo'] = $config->content->logo ?? null;
                 }
                 $config->content = $data;
                 $config->save();

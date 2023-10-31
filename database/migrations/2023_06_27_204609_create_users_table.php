@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('timezone', 45)->nullable();
             $table->string('date_format', 45)->nullable();
             $table->string('default_language', 5)->nullable();
+            $table->tinyInteger('indicates_system_admin')->default(0);
             $table->string('remember_token', 100)->nullable();
             $table->string('status', 45)->nullable();
             $table->timestamps();

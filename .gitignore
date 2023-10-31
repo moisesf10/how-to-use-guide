@@ -5,6 +5,7 @@
 /public/storage
 /storage/*.key
 /vendor
+/tests/Browser/ExampleTest.php
 .env
 .env.backup
 .env.production
