@@ -164,6 +164,7 @@ class AuthorizationController extends Controller
         try{
 
             if(! $editor){
+
                 $editor = WorkspaceEditor::create([
                     'workspace_id'  =>  $workspace->id,
                     'name'  =>  ucwords(mb_strtolower($request->name)),
@@ -179,6 +180,7 @@ class AuthorizationController extends Controller
                 ]);
 
             }else{
+
                 $editor->name = ucwords(mb_strtolower($request->name));
                 $editor->status = ( $request?->status == 'pending') ? $editor->status : mb_strtolower($request->status);
                 $editor->save();
@@ -342,7 +344,6 @@ class AuthorizationController extends Controller
             ->with('token', $token)
             ->with('editor', $editor)
             ;
-
 
     }
 

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->integer('order');
             $table->string('status', length: 20);
             $table->dateTime('created_at')->nullable();
-            $table->dateTime('update_at')->nullable();
+            $table->dateTime('updated_at')->nullable();
         });
 
         Schema::table('landing_pages', function (Blueprint $table){

@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('tokens', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('dastination_table_id')->nullable()->unsigned();
+            $table->bigInteger('destination_table_id')->nullable()->unsigned();
             $table->string('destination_table', length: 300)->nullable();
             $table->string('token', length: 100)->unique();
             $table->json('content')->nullable();
-            $table->tinyInteger('indicates_enable');
+            $table->tinyInteger('indicates_enabled');
             $table->dateTime('expires_in')->nullable();
             $table->dateTime('created_at')->nullable();
             $table->dateTime('updated_at')->nullable();

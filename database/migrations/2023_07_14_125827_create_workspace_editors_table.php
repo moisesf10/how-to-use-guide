@@ -17,8 +17,8 @@ return new class extends Migration
             $table->bigInteger('user_id')->nullable()->unsigned();
             $table->string('email', length: 80)->unique();
             $table->string('name', length: 120);
-            $table->string('status_send_email', length: 20)->nullable();
-            $table->dateTime('last_attemp_send_email')->nullable();
+            $table->string('status_send_mail', length: 20)->nullable();
+            $table->dateTime('last_attemp_send_mail')->nullable();
             $table->string('mail_error', length: 300)->nullable();
             $table->string('status', length: 25);
             $table->dateTime('created_at')->nullable();

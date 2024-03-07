@@ -9,7 +9,7 @@
                 <li class="breadcrumb-item active">Authorizations</li>
             </ol>
         </nav>
-        <h1>Editar Workspace @if($workspace?->user?->id <> auth()->user()->id) <span class="badge bg-info">compartilhada</span> @endif</h1>
+        <h1>Editar Workspace @if($workspace?->user?->id ?? auth()->user()->id) <span class="badge bg-info">compartilhada</span> @endif</h1>
         <h6 class="text-black-50">{{$workspace->name}}</h6>
     </div><!-- End Page Title -->
 @stop
